@@ -1,0 +1,19 @@
+/* 
+  Localizable.strings
+  Couchsurfers
+
+  Created by Norbert Gál on 2020. 09. 28..
+  
+*/
+
+"error" = "Error!";
+"accountCreated" = "Your account has been successfully created.";
+
+// Firebase errors
+"invalidEmailAddress" = "Email address is malformed.";
+"emailAlreadyInUse" = "Email address is already in use.";
+"operationNotAllowed" = "Email and password accounts are not enabled.";
+"weakPassword" = "Password is considered weak.";
+"unknownError" = "Something went wrong.";
+"userDisabled" = "User's account is disabled.";
+"wrongPassword" = "User attempted sign in with a wrong password.";

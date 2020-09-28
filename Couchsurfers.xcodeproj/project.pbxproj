@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AE4903A225214EAC00105D3A /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = AE4903A425214EAC00105D3A /* Localizable.strings */; };
+		AE5B62D1252139F000086E1F /* AuthenticationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE5B62D0252139F000086E1F /* AuthenticationViewModel.swift */; };
 		AE6DBA8C25212CEF0002224F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AE6DBA8B25212CEF0002224F /* GoogleService-Info.plist */; };
 		AEB14AEE2520F8950043D022 /* CouchsurfersApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEB14AED2520F8950043D022 /* CouchsurfersApp.swift */; };
 		AEB14AF02520F8950043D022 /* AuthenticationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEB14AEF2520F8950043D022 /* AuthenticationView.swift */; };
@@ -20,6 +22,9 @@
 		180C0E459606692656EB48FE /* Pods-Couchsurfers.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Couchsurfers.debug.xcconfig"; path = "Target Support Files/Pods-Couchsurfers/Pods-Couchsurfers.debug.xcconfig"; sourceTree = "<group>"; };
 		6AC4CE4A76FA46E53DFA4D11 /* Pods_Couchsurfers.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Couchsurfers.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		99DDA69D95D8296C0612AC03 /* Pods-Couchsurfers.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Couchsurfers.release.xcconfig"; path = "Target Support Files/Pods-Couchsurfers/Pods-Couchsurfers.release.xcconfig"; sourceTree = "<group>"; };
+		AE4903A325214EAC00105D3A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		AE4903A62521513500105D3A /* hu */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = hu; path = hu.lproj/Localizable.strings; sourceTree = "<group>"; };
+		AE5B62D0252139F000086E1F /* AuthenticationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationViewModel.swift; sourceTree = "<group>"; };
 		AE6DBA8B25212CEF0002224F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		AEB14AEA2520F8950043D022 /* Couchsurfers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Couchsurfers.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AEB14AED2520F8950043D022 /* CouchsurfersApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CouchsurfersApp.swift; sourceTree = "<group>"; };
@@ -59,6 +64,29 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		AE5B62CD252139BC00086E1F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				AEB14AEF2520F8950043D022 /* AuthenticationView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		AE5B62CE252139C800086E1F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		AE5B62CF252139CE00086E1F /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				AE5B62D0252139F000086E1F /* AuthenticationViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		AEB14AE12520F8940043D022 = {
 			isa = PBXGroup;
 			children = (
@@ -80,13 +108,16 @@
 		AEB14AEC2520F8950043D022 /* Couchsurfers */ = {
 			isa = PBXGroup;
 			children = (
+				AE5B62CE252139C800086E1F /* Model */,
+				AE5B62CD252139BC00086E1F /* View */,
+				AE5B62CF252139CE00086E1F /* ViewModel */,
 				AEB14AED2520F8950043D022 /* CouchsurfersApp.swift */,
-				AEB14AEF2520F8950043D022 /* AuthenticationView.swift */,
 				AEB14AF12520F8950043D022 /* Assets.xcassets */,
 				AEB14AF62520F8950043D022 /* Info.plist */,
 				AE6DBA8B25212CEF0002224F /* GoogleService-Info.plist */,
 				AEB14AF32520F8950043D022 /* Preview Content */,
 				AEEFCF8B252101AA00187526 /* AppDelegate.swift */,
+				AE4903A425214EAC00105D3A /* Localizable.strings */,
 			);
 			path = Couchsurfers;
 			sourceTree = "<group>";
@@ -142,6 +173,7 @@
 			knownRegions = (
 				en,
 				Base,
+				hu,
 			);
 			mainGroup = AEB14AE12520F8940043D022;
 			productRefGroup = AEB14AEB2520F8950043D022 /* Products */;
@@ -159,6 +191,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AEB14AF52520F8950043D022 /* Preview Assets.xcassets in Resources */,
+				AE4903A225214EAC00105D3A /* Localizable.strings in Resources */,
 				AE6DBA8C25212CEF0002224F /* GoogleService-Info.plist in Resources */,
 				AEB14AF22520F8950043D022 /* Assets.xcassets in Resources */,
 			);
@@ -213,6 +246,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AE5B62D1252139F000086E1F /* AuthenticationViewModel.swift in Sources */,
 				AEEFCF8C252101AA00187526 /* AppDelegate.swift in Sources */,
 				AEB14AF02520F8950043D022 /* AuthenticationView.swift in Sources */,
 				AEB14AEE2520F8950043D022 /* CouchsurfersApp.swift in Sources */,
@@ -221,11 +255,24 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXVariantGroup section */
+		AE4903A425214EAC00105D3A /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AE4903A325214EAC00105D3A /* en */,
+				AE4903A62521513500105D3A /* hu */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
 		AEB14AF72520F8950043D022 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -287,6 +334,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
