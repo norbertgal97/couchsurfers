@@ -8,6 +8,7 @@
 
 "error" = "Hiba!";
 "accountCreated" = "A felhasználói fiók sikeresen létrejött.";
+"defaultAlertMessage" = "Sajnáljuk! Az üzenet hiányzik.";
 
 // Firebase hibák
 "invalidEmailAddress" = "Hibás e-mail cím.";
@@ -17,3 +18,16 @@
 "unknownError" = "Ismeretlen hiba történt.";
 "userDisabled" = "A felhasználói fiók le van tiltva.";
 "wrongPassword" = "Hibás jelszó.";
+
+// placeholders
+"firstNamePlaceholder" = "Keresztnév";
+"lastNamePlaceholder" = "Vezetéknév";
+"emailAddressPlaceholder" = "E-mail cím";
+"passwordPlaceholder" = "Jelszó";
+
+// buttons, textFields
+"signUpButton" = "Regisztráció";
+"dividerText" = "vagy";
+"facebookButton" = "Bejelentkezés Facebookkal";
+"alreadyMemberButton" = "Már tag vagyok";
+"dismissButtonTest" = "Folytatás";

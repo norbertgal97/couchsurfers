@@ -1,5 +1,5 @@
 //
-//  AuthenticationViewModel.swift
+//  RegistrationViewModel.swift
 //  Couchsurfers
 //
 //  Created by Norbert Gál on 2020. 09. 27..
@@ -8,9 +8,13 @@
 import Foundation
 import Firebase
 
-class AuthenticationViewModel: ObservableObject {
+class RegistrationViewModel: ObservableObject {
+    @Published var emailAddress = ""
+    @Published var password = ""
+    @Published var firstName = ""
+    @Published var lastName = ""
     @Published var showingAlert = false
-    @Published var alertDescription: String?
+    @Published var alertDescription: String = NSLocalizedString("defaultAlertMessage", comment: "Default alert message")
     
     var handle: AuthStateDidChangeListenerHandle?
     
@@ -28,6 +32,7 @@ class AuthenticationViewModel: ObservableObject {
         if let unwrappedHandle = handle {
             Auth.auth().removeStateDidChangeListener(unwrappedHandle)
         }
+        
     }
     
     func createNewFirebaseUser(email: String, password: String) {

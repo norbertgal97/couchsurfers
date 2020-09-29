@@ -8,6 +8,7 @@
 
 "error" = "Error!";
 "accountCreated" = "Your account has been successfully created.";
+"defaultAlertMessage" = "Sorry! Alert message is missing.";
 
 // Firebase errors
 "invalidEmailAddress" = "Email address is malformed.";
@@ -17,3 +18,17 @@
 "unknownError" = "Something went wrong.";
 "userDisabled" = "User's account is disabled.";
 "wrongPassword" = "User attempted sign in with a wrong password.";
+
+// placeholders
+"firstNamePlaceholder" = "Enter your first name";
+"lastNamePlaceholder" = "Enter your last name";
+"emailAddressPlaceholder" = "Enter your email address";
+"passwordPlaceholder" = "Enter your password";
+
+
+// buttons, textFields
+"signUpButton" = "Sign up";
+"dividerText" = "or you can";
+"facebookButton" = "Log in with Facebook";
+"alreadyMemberButton" = "I am already a member";
+"dismissButtonText" = "Continue";

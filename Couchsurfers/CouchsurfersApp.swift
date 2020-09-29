@@ -13,7 +13,13 @@ struct CouchsurfersApp: App {
     
     var body: some Scene {
         WindowGroup {
-            AuthenticationView()
+            if appDelegate.userLoggedIn {
+                // ExplorationView will be here. This is here just for testing purposes.
+                RegistrationView()
+            } else {
+                RegistrationView()
+            }
+            
         }
     }
 }
