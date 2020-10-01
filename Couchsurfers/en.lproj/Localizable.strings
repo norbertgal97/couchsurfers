@@ -28,7 +28,13 @@
 
 // buttons, textFields
 "signUpButton" = "Sign up";
+"logInButton" = "Log in";
 "dividerText" = "or you can";
 "facebookButton" = "Log in with Facebook";
 "alreadyMemberButton" = "I am already a member";
+"forgotPasswordButton" = "Forgotten Password?";
 "dismissButtonText" = "Continue";
+
+// sign in errors
+"emptyFields" = "Please fill required fields";
+

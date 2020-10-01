@@ -36,6 +36,12 @@ class RegistrationViewModel: ObservableObject {
     }
     
     func createNewFirebaseUser(email: String, password: String) {
+        if email.isEmpty || password.isEmpty || firstName.isEmpty || lastName.isEmpty {
+            self.alertDescription = NSLocalizedString("emptyFields", comment: "Empty fields")
+            self.showingAlert.toggle()
+            return
+        }
+        
         Auth.auth().createUser(withEmail: email, password: password) { authResult, error in
             
             if let unwrappedError = error {
@@ -62,36 +68,6 @@ class RegistrationViewModel: ObservableObject {
             if authResult != nil {
                 self.alertDescription = NSLocalizedString("accountCreated", comment: "Account created")
                 self.showingAlert.toggle()
-            }
-        }
-    }
-    
-    func signInUser(email: String, password: String) {
-        Auth.auth().signIn(withEmail: email, password: password) { authResult, error in
-            
-            if let unwrappedError = error {
-                let errorCode = AuthErrorCode(rawValue: unwrappedError._code)
-                
-                switch errorCode {
-                case .invalidEmail:
-                    self.alertDescription = NSLocalizedString("invalidEmailAddress", comment: "Invalid email")
-                case .userDisabled:
-                    self.alertDescription = NSLocalizedString("userDisabled", comment: "User disabled")
-                case .operationNotAllowed:
-                    self.alertDescription = NSLocalizedString("operationNotAllowed", comment: "Operation not allowed")
-                case .wrongPassword:
-                    self.alertDescription = NSLocalizedString("wrongPassword", comment: "Wrong password")
-                default:
-                    self.alertDescription = NSLocalizedString("unknownError", comment: "Unknown error")
-                }
-                
-                self.showingAlert.toggle()
-                
-                return
-            }
-            
-            if authResult != nil {
-                // User is signed in
             }
         }
     }

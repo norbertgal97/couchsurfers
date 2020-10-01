@@ -8,9 +8,12 @@
 import SwiftUI
 
 struct RegistrationView: View {
-    @State private var showingSheet = false
+    @State private var isShowingSheet = false
+    @State private var isShowingExplorationView = false
     
     @ObservedObject var registrationVM = RegistrationViewModel()
+    
+    @EnvironmentObject var env: GlobalEnvironment
     
     var body: some View {
         ZStack {
@@ -64,12 +67,17 @@ struct RegistrationView: View {
                 Spacer()
                 
                 Button(action : {
-                    self.showingSheet.toggle()
+                    self.isShowingSheet.toggle()
                 }) {
                     Text(NSLocalizedString("alreadyMemberButton", comment: "I am already a member"))
                         .foregroundColor(.black)
                         .fontWeight(.bold)
                 }
+                
+                //NavigationLink(destination: ExplorationView(), isActive: $isShowingExplorationView) {
+                  //  EmptyView()
+               // }
+               // .hidden()
             }
         }
         .onAppear {
@@ -83,37 +91,11 @@ struct RegistrationView: View {
                 print("Dismiss button pressed")
             })
         })
-        .sheet(isPresented: $showingSheet) {
-            LoginView()
+        .sheet(isPresented: $isShowingSheet) {
+            LoginView(isPresented: $isShowingSheet, isShowingExplorationView: $isShowingExplorationView)
+                .environmentObject(env)
         }
-    }
-}
-
-struct InputFieldWithImage: View {
-    @Binding var text: String
-    let textFieldPlaceholder: String
-    let imageSystemName: String
-    let isSecret: Bool
-    
-    var body: some View {
-        HStack {
-            Image(systemName: imageSystemName)
-                .frame(width: 50, height: 50)
-                .scaleEffect(1.3)
-                .foregroundColor(.black)
-            
-            if isSecret {
-                SecureField(textFieldPlaceholder, text: $text)
-            } else {
-                TextField(textFieldPlaceholder, text: $text)
-            }
-        }
-        .frame(width: 350, height: 50)
-        .background(
-            RoundedRectangle(cornerRadius: 10).stroke(Color.gray, lineWidth: 2)
-                .background(Color.white)
-        )
-        .cornerRadius(10)
+        .navigationBarHidden(true)
     }
 }
 

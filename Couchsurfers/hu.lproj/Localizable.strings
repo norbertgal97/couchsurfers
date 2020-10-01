@@ -27,7 +27,12 @@
 
 // buttons, textFields
 "signUpButton" = "Regisztráció";
+"logInButton" = "Bejelentkezés";
 "dividerText" = "vagy";
 "facebookButton" = "Bejelentkezés Facebookkal";
 "alreadyMemberButton" = "Már tag vagyok";
+"forgotPasswordButton" = "Elfelejtette a jelszavát?";
 "dismissButtonTest" = "Folytatás";
+
+// sign in errors
+"emptyFields" = "Kérjük, töltse ki a szükséges mezőket";

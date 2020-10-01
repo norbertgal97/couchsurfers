@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Firebase
 
 @main
 struct CouchsurfersApp: App {
@@ -13,13 +14,22 @@ struct CouchsurfersApp: App {
     
     var body: some Scene {
         WindowGroup {
-            if appDelegate.userLoggedIn {
-                // ExplorationView will be here. This is here just for testing purposes.
-                RegistrationView()
-            } else {
-                RegistrationView()
-            }
-            
+            RootView()
+                .environmentObject(GlobalEnvironment(appDelegate.userLoggedIn))
         }
+    }
+}
+
+struct CouchsurfersApp_Previews: PreviewProvider {
+    static var previews: some View {
+        /*@START_MENU_TOKEN@*/Text("Hello, World!")/*@END_MENU_TOKEN@*/
+    }
+}
+
+class GlobalEnvironment: ObservableObject {
+    @Published var userLoggedIn = false
+    
+    init(_ userLoggedIn: Bool) {
+        self.userLoggedIn = userLoggedIn
     }
 }
