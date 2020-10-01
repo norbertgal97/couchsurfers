@@ -1,0 +1,38 @@
+/* 
+  Localizable.strings
+  Couchsurfers
+
+  Created by Norbert Gál on 2020. 09. 28..
+  
+*/
+
+"error" = "Hiba!";
+"accountCreated" = "A felhasználói fiók sikeresen létrejött.";
+"defaultAlertMessage" = "Sajnáljuk! Az üzenet hiányzik.";
+
+// Firebase hibák
+"invalidEmailAddress" = "Hibás e-mail cím.";
+"emailAlreadyInUse" = "Az e-mail cím már használatban van.";
+"operationNotAllowed" = "E-mail címes autentikáció nem engedélyezett.";
+"weakPassword" = "Gyenge jelszó.";
+"unknownError" = "Ismeretlen hiba történt.";
+"userDisabled" = "A felhasználói fiók le van tiltva.";
+"wrongPassword" = "Hibás jelszó.";
+
+// placeholders
+"firstNamePlaceholder" = "Keresztnév";
+"lastNamePlaceholder" = "Vezetéknév";
+"emailAddressPlaceholder" = "E-mail cím";
+"passwordPlaceholder" = "Jelszó";
+
+// buttons, textFields
+"signUpButton" = "Regisztráció";
+"logInButton" = "Bejelentkezés";
+"dividerText" = "vagy";
+"facebookButton" = "Bejelentkezés Facebookkal";
+"alreadyMemberButton" = "Már tag vagyok";
+"forgotPasswordButton" = "Elfelejtette a jelszavát?";
+"dismissButtonTest" = "Folytatás";
+
+// sign in errors
+"emptyFields" = "Kérjük, töltse ki a szükséges mezőket";
