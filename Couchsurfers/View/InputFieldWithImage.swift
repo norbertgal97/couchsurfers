@@ -9,6 +9,7 @@ import SwiftUI
 
 struct InputFieldWithImage: View {
     @Binding var text: String
+    
     let textFieldPlaceholder: String
     let imageSystemName: String
     let isSecret: Bool

@@ -9,6 +9,7 @@
 "error" = "Error!";
 "accountCreated" = "Your account has been successfully created.";
 "defaultAlertMessage" = "Sorry! Alert message is missing.";
+"placesAPIlanguage" = "en-GB";
 
 // Firebase errors
 "invalidEmailAddress" = "Email address is malformed.";
@@ -34,7 +35,21 @@
 "alreadyMemberButton" = "I am already a member";
 "forgotPasswordButton" = "Forgotten Password?";
 "dismissButtonText" = "Continue";
+"exploreNearbyButton" = "Explore nearby";
 
 // sign in errors
 "emptyFields" = "Please fill required fields";
+
+// tabView
+"exploreTabItem" = "Explore";
+"mapTabItem" = "Map";
+"couchesTabItem" = "Couches";
+"inboxTabItem" = "Inbox";
+"profileTabItem" = "Profile";
+
+// explorationView
+"rndmPlaceToVisitText" = "Plan a trip to a random location";
+"goNearText" = "Go near";
+"discoverNearbyPlacesText" = "Discover nearby stays to relax";
+"destinationPlaceholder" = "Where are you going?";
 

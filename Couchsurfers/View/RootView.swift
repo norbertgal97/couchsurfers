@@ -8,16 +8,14 @@
 import SwiftUI
 
 struct RootView: View {
-    
     @EnvironmentObject var env: GlobalEnvironment
     
     var body: some View {
         
         if env.userLoggedIn {
-            ExplorationView()
+            MainTabView()
         } else {
             RegistrationView()
-                .environmentObject(env)
         }
         
     }

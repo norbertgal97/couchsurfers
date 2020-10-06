@@ -73,11 +73,6 @@ struct RegistrationView: View {
                         .foregroundColor(.black)
                         .fontWeight(.bold)
                 }
-                
-                //NavigationLink(destination: ExplorationView(), isActive: $isShowingExplorationView) {
-                  //  EmptyView()
-               // }
-               // .hidden()
             }
         }
         .onAppear {
@@ -93,9 +88,7 @@ struct RegistrationView: View {
         })
         .sheet(isPresented: $isShowingSheet) {
             LoginView(isPresented: $isShowingSheet, isShowingExplorationView: $isShowingExplorationView)
-                .environmentObject(env)
         }
-        .navigationBarHidden(true)
     }
 }
 
@@ -103,6 +96,7 @@ struct DividerWithText: View {
     let color: Color = .gray
     let width: CGFloat = 2
     let text: String
+    
     var body: some View {
         HStack {
             Rectangle()

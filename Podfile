@@ -13,6 +13,9 @@ target 'Couchsurfers' do
   # add the Firebase pod for Firebase Authentication
   pod 'Firebase/Auth'
 
+  # Alamofire
+  pod 'Alamofire'
+
   post_install do |pi|
        pi.pods_project.targets.each do |t|
         t.build_configurations.each do |config|
