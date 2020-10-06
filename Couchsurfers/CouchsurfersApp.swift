@@ -15,7 +15,7 @@ struct CouchsurfersApp: App {
     var body: some Scene {
         WindowGroup {
             RootView()
-                .environmentObject(GlobalEnvironment(appDelegate.userLoggedIn))
+                .environmentObject(GlobalEnvironment(Auth.auth().currentUser != nil))
         }
     }
 }

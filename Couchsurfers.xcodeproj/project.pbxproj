@@ -8,11 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		AE26A0B62522C5380026B9B4 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE26A0B52522C5380026B9B4 /* LoginView.swift */; };
+		AE37DBAF25264DFE00E25D8B /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE37DBAE25264DFE00E25D8B /* MainTabView.swift */; };
 		AE47A49025252D2E00A033D8 /* InputFieldWithImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE47A48F25252D2E00A033D8 /* InputFieldWithImage.swift */; };
 		AE47A49325253E3000A033D8 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE47A49225253E3000A033D8 /* LoginViewModel.swift */; };
 		AE47A4962525686B00A033D8 /* ExplorationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE47A4952525686B00A033D8 /* ExplorationView.swift */; };
 		AE47A49925260ED900A033D8 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE47A49825260ED900A033D8 /* RootView.swift */; };
 		AE4903A225214EAC00105D3A /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = AE4903A425214EAC00105D3A /* Localizable.strings */; };
+		AE4A119725268231000B4EC7 /* ExplorationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE4A119625268231000B4EC7 /* ExplorationViewModel.swift */; };
+		AE4A11A9252693CC000B4EC7 /* Predictions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE4A11A8252693CC000B4EC7 /* Predictions.swift */; };
 		AE5B62D1252139F000086E1F /* RegistrationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE5B62D0252139F000086E1F /* RegistrationViewModel.swift */; };
 		AE6DBA8C25212CEF0002224F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AE6DBA8B25212CEF0002224F /* GoogleService-Info.plist */; };
 		AEB14AEE2520F8950043D022 /* CouchsurfersApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEB14AED2520F8950043D022 /* CouchsurfersApp.swift */; };
@@ -29,12 +32,15 @@
 		6AC4CE4A76FA46E53DFA4D11 /* Pods_Couchsurfers.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Couchsurfers.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		99DDA69D95D8296C0612AC03 /* Pods-Couchsurfers.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Couchsurfers.release.xcconfig"; path = "Target Support Files/Pods-Couchsurfers/Pods-Couchsurfers.release.xcconfig"; sourceTree = "<group>"; };
 		AE26A0B52522C5380026B9B4 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		AE37DBAE25264DFE00E25D8B /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
 		AE47A48F25252D2E00A033D8 /* InputFieldWithImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputFieldWithImage.swift; sourceTree = "<group>"; };
 		AE47A49225253E3000A033D8 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		AE47A4952525686B00A033D8 /* ExplorationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExplorationView.swift; sourceTree = "<group>"; };
 		AE47A49825260ED900A033D8 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
 		AE4903A325214EAC00105D3A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		AE4903A62521513500105D3A /* hu */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = hu; path = hu.lproj/Localizable.strings; sourceTree = "<group>"; };
+		AE4A119625268231000B4EC7 /* ExplorationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExplorationViewModel.swift; sourceTree = "<group>"; };
+		AE4A11A8252693CC000B4EC7 /* Predictions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Predictions.swift; sourceTree = "<group>"; };
 		AE5B62D0252139F000086E1F /* RegistrationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewModel.swift; sourceTree = "<group>"; };
 		AE6DBA8B25212CEF0002224F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		AEB14AEA2520F8950043D022 /* Couchsurfers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Couchsurfers.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -84,6 +90,7 @@
 				AE47A48F25252D2E00A033D8 /* InputFieldWithImage.swift */,
 				AE47A4952525686B00A033D8 /* ExplorationView.swift */,
 				AE47A49825260ED900A033D8 /* RootView.swift */,
+				AE37DBAE25264DFE00E25D8B /* MainTabView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -91,6 +98,7 @@
 		AE5B62CE252139C800086E1F /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				AE4A11A8252693CC000B4EC7 /* Predictions.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -100,6 +108,7 @@
 			children = (
 				AE5B62D0252139F000086E1F /* RegistrationViewModel.swift */,
 				AE47A49225253E3000A033D8 /* LoginViewModel.swift */,
+				AE4A119625268231000B4EC7 /* ExplorationViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -274,14 +283,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				AE47A4962525686B00A033D8 /* ExplorationView.swift in Sources */,
+				AE4A119725268231000B4EC7 /* ExplorationViewModel.swift in Sources */,
 				AE5B62D1252139F000086E1F /* RegistrationViewModel.swift in Sources */,
 				AE47A49025252D2E00A033D8 /* InputFieldWithImage.swift in Sources */,
+				AE4A11A9252693CC000B4EC7 /* Predictions.swift in Sources */,
 				AEEFCF8C252101AA00187526 /* AppDelegate.swift in Sources */,
 				AEB14AF02520F8950043D022 /* RegistrationView.swift in Sources */,
 				AE47A49925260ED900A033D8 /* RootView.swift in Sources */,
 				AE26A0B62522C5380026B9B4 /* LoginView.swift in Sources */,
 				AEB14AEE2520F8950043D022 /* CouchsurfersApp.swift in Sources */,
 				AE47A49325253E3000A033D8 /* LoginViewModel.swift in Sources */,
+				AE37DBAF25264DFE00E25D8B /* MainTabView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

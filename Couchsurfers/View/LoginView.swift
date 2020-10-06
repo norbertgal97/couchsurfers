@@ -5,11 +5,9 @@
 //  Created by Norbert Gál on 2020. 09. 29..
 //
 
-import Foundation
 import SwiftUI
 
 struct LoginView: View {
-    
     @Binding var isPresented: Bool
     @Binding var isShowingExplorationView: Bool
     
@@ -17,7 +15,6 @@ struct LoginView: View {
     
     @EnvironmentObject var env: GlobalEnvironment
 
-    
     var body: some View {
         ZStack {
             LinearGradient(gradient: Gradient(colors: [.white, Color(#colorLiteral(red: 0.9333333333, green: 0.937254902, blue: 0.1254901961, alpha: 1))]), startPoint: .top, endPoint: .bottom)
@@ -72,9 +69,6 @@ struct LoginView: View {
         })
     }
 }
-
-
-
 
 struct Login_Previews: PreviewProvider {
     @State static var value = true
