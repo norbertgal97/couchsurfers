@@ -7,6 +7,7 @@
 
 import Foundation
 import Firebase
+import FBSDKLoginKit
 
 class RegistrationViewModel: ObservableObject {
     @Published var emailAddress = ""
@@ -15,6 +16,7 @@ class RegistrationViewModel: ObservableObject {
     @Published var lastName = ""
     @Published var showingAlert = false
     @Published var alertDescription: String = NSLocalizedString("defaultAlertMessage", comment: "Default alert message")
+    
     
     var handle: AuthStateDidChangeListenerHandle?
     
@@ -70,5 +72,41 @@ class RegistrationViewModel: ObservableObject {
                 self.showingAlert.toggle()
             }
         }
+    }
+    
+    func continueWithFacebook(completionHandler: @escaping (Bool) -> Void) {
+        let loginManager = LoginManager()
+        
+        loginManager.logIn(permissions: [.publicProfile, .email], viewController: nil) { loginResult in
+            switch loginResult {
+            case .failed(let error):
+                print(error)
+                completionHandler(false)
+            case .cancelled:
+                print("User cancelled login.")
+                completionHandler(false)
+            case .success(let grantedPermissions, let declinedPermissions, let accessToken):
+                print("Logged in! \(grantedPermissions) \(declinedPermissions) \(accessToken)")
+                GraphRequest(graphPath: "me", parameters: ["fields": "id, name, first_name"]).start(completionHandler: { (connection, result, error) in
+                    if (error == nil){
+                        let fbDetails = result as! NSDictionary
+                        print(fbDetails)
+                    }
+                })
+                
+                let credential = FacebookAuthProvider.credential(withAccessToken: AccessToken.current!.tokenString)
+                Auth.auth().signIn(with: credential) { (authResult, error) in
+                    if error != nil {
+                        print(error!.localizedDescription)
+                        completionHandler(false)
+                        return
+                    }
+                    completionHandler(true)
+                    // User is signed in
+                    // ...
+                }
+            }
+        }
+        
     }
 }
