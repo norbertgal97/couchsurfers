@@ -6,6 +6,8 @@
 //
 
 import SwiftUI
+import FBSDKLoginKit
+import Firebase
 
 struct RegistrationView: View {
     @State private var isShowingSheet = false
@@ -49,9 +51,11 @@ struct RegistrationView: View {
                 .cornerRadius(10)
                 
                 DividerWithText(text: NSLocalizedString("dividerText", comment: "or you can"))
-                
+        
                 Button(action : {
-                    // action
+                    registrationVM.continueWithFacebook() { result in
+                        self.env.userLoggedIn = result
+                    }
                 }) {
                     Text(NSLocalizedString("facebookButton", comment: "Log in with Facebook"))
                         .foregroundColor(Color(#colorLiteral(red: 0.3333333333, green: 0.6509803922, blue: 0.1882352941, alpha: 1)))

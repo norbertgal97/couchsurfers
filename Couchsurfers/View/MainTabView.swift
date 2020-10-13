@@ -35,7 +35,7 @@ struct MainTabView: View {
                     Text(NSLocalizedString("inboxTabItem", comment: "Inbox"))
                 }
             
-            Text("Tab 5")
+            ProfileView()
                 .tabItem {
                     Image(systemName: "person")
                     Text(NSLocalizedString("profileTabItem", comment: "Profile"))
