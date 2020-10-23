@@ -7,6 +7,7 @@
 
 import SwiftUI
 import Firebase
+import FBSDKCoreKit
 
 @main
 struct CouchsurfersApp: App {
@@ -16,6 +17,10 @@ struct CouchsurfersApp: App {
         WindowGroup {
             RootView()
                 .environmentObject(GlobalEnvironment(Auth.auth().currentUser != nil))
+                .onOpenURL(perform: { url in
+                    ApplicationDelegate.shared.application(UIApplication.shared, open: url, sourceApplication: nil, annotation: UIApplication.OpenURLOptionsKey.annotation)
+                    
+                })
         }
     }
 }
