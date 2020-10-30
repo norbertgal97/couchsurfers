@@ -10,6 +10,13 @@
 "accountCreated" = "A felhasználói fiók sikeresen létrejött.";
 "defaultAlertMessage" = "Sajnáljuk! Az üzenet hiányzik.";
 "placesAPIlanguage" = "hu";
+"alertTitle" = "Információ";
+
+// Genders
+"notSpecified" = "Nincs megadva";
+"male" = "Férfi";
+"female" = "Nő";
+"other" = "Egyéb";
 
 // Firebase hibák
 "invalidEmailAddress" = "Hibás e-mail cím.";
@@ -51,3 +58,24 @@
 "goNearText" = "Utazzon közel";
 "discoverNearbyPlacesText" = "Fedezzen fel közeli helyeket a pihenésre";
 "destinationPlaceholder" = "Hova utazna el?";
+"unknown" = "Ismeretlen";
+"noSavedCouches" = "Nincsenek elmentett helyek vagy betöltés alatt vannak.";
+
+// profileView
+"showProfile" = "Profil mutatása";
+"aSettings" = "Fiókbeállítások";
+"pInformation" = "Személyes adatok";
+"notifications" = "Értesítések";
+"hosting" = "Kiadás";
+"listYourCouch" = "Kanapé kiadása";
+"logOut" = "Kijelentkezés";
+
+// personalInformationView
+"name" = "NÉV";
+"firstName" = "Keresztnév";
+"lastName" = "Vezetéknév";
+"gender" = "NEM";
+"selectGender" = "Nem kiválasztása";
+"phoneNumber" = "TELEFONSZÁM";
+"number" = "Szám";
+"save" = "Mentés";
