@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AE1D3D0E25447AD00042F11B /* ReverseGeo.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE1D3D0D25447AD00042F11B /* ReverseGeo.swift */; };
 		AE26A0B62522C5380026B9B4 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE26A0B52522C5380026B9B4 /* LoginView.swift */; };
 		AE37DBAF25264DFE00E25D8B /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE37DBAE25264DFE00E25D8B /* MainTabView.swift */; };
 		AE47A49025252D2E00A033D8 /* InputFieldWithImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE47A48F25252D2E00A033D8 /* InputFieldWithImage.swift */; };
@@ -22,8 +23,15 @@
 		AEB14AF02520F8950043D022 /* RegistrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEB14AEF2520F8950043D022 /* RegistrationView.swift */; };
 		AEB14AF22520F8950043D022 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AEB14AF12520F8950043D022 /* Assets.xcassets */; };
 		AEB14AF52520F8950043D022 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AEB14AF42520F8950043D022 /* Preview Assets.xcassets */; };
+		AEB57979254649A800799302 /* Couch.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEB57978254649A800799302 /* Couch.swift */; };
+		AEB579AD2547987B00799302 /* ReversePlaceId.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEB579AC2547987B00799302 /* ReversePlaceId.swift */; };
 		AEBEB23725327A3600DA503C /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEBEB23625327A3600DA503C /* ProfileView.swift */; };
 		AEBEB23A25327AD000DA503C /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEBEB23925327AD000DA503C /* ProfileViewModel.swift */; };
+		AECA598C254B9E85003CFCE5 /* PersonalInformationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AECA598B254B9E85003CFCE5 /* PersonalInformationView.swift */; };
+		AECA598F254B9F41003CFCE5 /* PersonalInformationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AECA598E254B9F41003CFCE5 /* PersonalInformationViewModel.swift */; };
+		AECA5992254C5EF2003CFCE5 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = AECA5991254C5EF2003CFCE5 /* User.swift */; };
+		AECA5995254C7754003CFCE5 /* CustomError.swift in Sources */ = {isa = PBXBuildFile; fileRef = AECA5994254C7754003CFCE5 /* CustomError.swift */; };
+		AECA5998254C7AB3003CFCE5 /* GenderType.swift in Sources */ = {isa = PBXBuildFile; fileRef = AECA5997254C7AB3003CFCE5 /* GenderType.swift */; };
 		AEE97FD6252174050020071B /* Pacifico-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AEE97FD5252174050020071B /* Pacifico-Regular.ttf */; };
 		AEEFCF8C252101AA00187526 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEEFCF8B252101AA00187526 /* AppDelegate.swift */; };
 		FF95506335CD39DFFC757BEF /* Pods_Couchsurfers.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6AC4CE4A76FA46E53DFA4D11 /* Pods_Couchsurfers.framework */; };
@@ -33,6 +41,7 @@
 		180C0E459606692656EB48FE /* Pods-Couchsurfers.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Couchsurfers.debug.xcconfig"; path = "Target Support Files/Pods-Couchsurfers/Pods-Couchsurfers.debug.xcconfig"; sourceTree = "<group>"; };
 		6AC4CE4A76FA46E53DFA4D11 /* Pods_Couchsurfers.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Couchsurfers.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		99DDA69D95D8296C0612AC03 /* Pods-Couchsurfers.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Couchsurfers.release.xcconfig"; path = "Target Support Files/Pods-Couchsurfers/Pods-Couchsurfers.release.xcconfig"; sourceTree = "<group>"; };
+		AE1D3D0D25447AD00042F11B /* ReverseGeo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReverseGeo.swift; sourceTree = "<group>"; };
 		AE26A0B52522C5380026B9B4 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		AE37DBAE25264DFE00E25D8B /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
 		AE47A48F25252D2E00A033D8 /* InputFieldWithImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputFieldWithImage.swift; sourceTree = "<group>"; };
@@ -51,8 +60,15 @@
 		AEB14AF12520F8950043D022 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AEB14AF42520F8950043D022 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		AEB14AF62520F8950043D022 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AEB57978254649A800799302 /* Couch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Couch.swift; sourceTree = "<group>"; };
+		AEB579AC2547987B00799302 /* ReversePlaceId.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReversePlaceId.swift; sourceTree = "<group>"; };
 		AEBEB23625327A3600DA503C /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		AEBEB23925327AD000DA503C /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
+		AECA598B254B9E85003CFCE5 /* PersonalInformationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalInformationView.swift; sourceTree = "<group>"; };
+		AECA598E254B9F41003CFCE5 /* PersonalInformationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalInformationViewModel.swift; sourceTree = "<group>"; };
+		AECA5991254C5EF2003CFCE5 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		AECA5994254C7754003CFCE5 /* CustomError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomError.swift; sourceTree = "<group>"; };
+		AECA5997254C7AB3003CFCE5 /* GenderType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenderType.swift; sourceTree = "<group>"; };
 		AEE97FD5252174050020071B /* Pacifico-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pacifico-Regular.ttf"; sourceTree = "<group>"; };
 		AEEFCF8B252101AA00187526 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -96,6 +112,7 @@
 				AE47A49825260ED900A033D8 /* RootView.swift */,
 				AE37DBAE25264DFE00E25D8B /* MainTabView.swift */,
 				AEBEB23625327A3600DA503C /* ProfileView.swift */,
+				AECA598B254B9E85003CFCE5 /* PersonalInformationView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -104,6 +121,12 @@
 			isa = PBXGroup;
 			children = (
 				AE4A11A8252693CC000B4EC7 /* Predictions.swift */,
+				AE1D3D0D25447AD00042F11B /* ReverseGeo.swift */,
+				AEB57978254649A800799302 /* Couch.swift */,
+				AEB579AC2547987B00799302 /* ReversePlaceId.swift */,
+				AECA5991254C5EF2003CFCE5 /* User.swift */,
+				AECA5994254C7754003CFCE5 /* CustomError.swift */,
+				AECA5997254C7AB3003CFCE5 /* GenderType.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -115,6 +138,7 @@
 				AE47A49225253E3000A033D8 /* LoginViewModel.swift */,
 				AE4A119625268231000B4EC7 /* ExplorationViewModel.swift */,
 				AEBEB23925327AD000DA503C /* ProfileViewModel.swift */,
+				AECA598E254B9F41003CFCE5 /* PersonalInformationViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -292,14 +316,22 @@
 				AEBEB23725327A3600DA503C /* ProfileView.swift in Sources */,
 				AE4A119725268231000B4EC7 /* ExplorationViewModel.swift in Sources */,
 				AE5B62D1252139F000086E1F /* RegistrationViewModel.swift in Sources */,
+				AECA598F254B9F41003CFCE5 /* PersonalInformationViewModel.swift in Sources */,
 				AE47A49025252D2E00A033D8 /* InputFieldWithImage.swift in Sources */,
 				AE4A11A9252693CC000B4EC7 /* Predictions.swift in Sources */,
 				AEBEB23A25327AD000DA503C /* ProfileViewModel.swift in Sources */,
+				AECA5992254C5EF2003CFCE5 /* User.swift in Sources */,
 				AEEFCF8C252101AA00187526 /* AppDelegate.swift in Sources */,
+				AEB57979254649A800799302 /* Couch.swift in Sources */,
 				AEB14AF02520F8950043D022 /* RegistrationView.swift in Sources */,
+				AECA5998254C7AB3003CFCE5 /* GenderType.swift in Sources */,
+				AEB579AD2547987B00799302 /* ReversePlaceId.swift in Sources */,
+				AECA598C254B9E85003CFCE5 /* PersonalInformationView.swift in Sources */,
+				AECA5995254C7754003CFCE5 /* CustomError.swift in Sources */,
 				AE47A49925260ED900A033D8 /* RootView.swift in Sources */,
 				AE26A0B62522C5380026B9B4 /* LoginView.swift in Sources */,
 				AEB14AEE2520F8950043D022 /* CouchsurfersApp.swift in Sources */,
+				AE1D3D0E25447AD00042F11B /* ReverseGeo.swift in Sources */,
 				AE47A49325253E3000A033D8 /* LoginViewModel.swift in Sources */,
 				AE37DBAF25264DFE00E25D8B /* MainTabView.swift in Sources */,
 			);

@@ -16,7 +16,7 @@ class RegistrationViewModel: ObservableObject {
     @Published var lastName = ""
     @Published var showingAlert = false
     @Published var alertDescription: String = NSLocalizedString("defaultAlertMessage", comment: "Default alert message")
-    
+    @Published var userLoggedIn = false
     
     var handle: AuthStateDidChangeListenerHandle?
     
@@ -41,6 +41,7 @@ class RegistrationViewModel: ObservableObject {
         if email.isEmpty || password.isEmpty || firstName.isEmpty || lastName.isEmpty {
             self.alertDescription = NSLocalizedString("emptyFields", comment: "Empty fields")
             self.showingAlert.toggle()
+            userLoggedIn = false
             return
         }
         
@@ -63,6 +64,7 @@ class RegistrationViewModel: ObservableObject {
                 }
                 
                 self.showingAlert.toggle()
+                self.userLoggedIn = false
                 
                 return
             }
@@ -70,6 +72,22 @@ class RegistrationViewModel: ObservableObject {
             if authResult != nil {
                 self.alertDescription = NSLocalizedString("accountCreated", comment: "Account created")
                 self.showingAlert.toggle()
+                self.userLoggedIn = true
+                
+                db?.collection("users").document(authResult!.user.uid).setData([
+                    "firstName": self.firstName,
+                    "lastName": self.lastName,
+                    "created": Timestamp(date: Date()),
+                    "phone": "",
+                    "gender": 0
+                ]) { err in
+                    if let err = err {
+                        print("Error adding document: \(err)")
+                    } else {
+                        print("Document added with ID: \(authResult!.user.uid)")
+                    }
+                }
+                
             }
         }
     }
@@ -87,12 +105,6 @@ class RegistrationViewModel: ObservableObject {
                 completionHandler(false)
             case .success(let grantedPermissions, let declinedPermissions, let accessToken):
                 print("Logged in! \(grantedPermissions) \(declinedPermissions) \(accessToken)")
-                GraphRequest(graphPath: "me", parameters: ["fields": "id, name, first_name"]).start(completionHandler: { (connection, result, error) in
-                    if (error == nil){
-                        let fbDetails = result as! NSDictionary
-                        print(fbDetails)
-                    }
-                })
                 
                 let credential = FacebookAuthProvider.credential(withAccessToken: AccessToken.current!.tokenString)
                 Auth.auth().signIn(with: credential) { (authResult, error) in
@@ -101,9 +113,41 @@ class RegistrationViewModel: ObservableObject {
                         completionHandler(false)
                         return
                     }
-                    completionHandler(true)
-                    // User is signed in
-                    // ...
+                    if(authResult != nil) {
+                        
+                        db?.collection("users").document(authResult!.user.uid).getDocument { (document, error) in
+                            if let document = document, document.exists {
+                                print("Document exists with ID: \(document.documentID)")
+                                completionHandler(true)
+                            } else {
+                                print("Document does not exist")
+                                
+                                GraphRequest(graphPath: "me", parameters: ["fields": "id, last_name, first_name"]).start(completionHandler: { (connection, result, error) in
+                                    if (error == nil){
+                                        let fbDetails = result as! NSDictionary
+                                        print(fbDetails)
+                                        
+                                        db?.collection("users").document(authResult!.user.uid).setData([
+                                            "firstName": fbDetails.value(forKey: "first_name") ?? "first_name",
+                                            "lastName": fbDetails.value(forKey: "last_name") ?? "last_name",
+                                            "created": Timestamp(date: Date()),
+                                            "phone": "",
+                                            "gender": 0
+                                        ]) { err in
+                                            if let err = err {
+                                                print("Error adding document: \(err)")
+                                                completionHandler(false)
+                                            } else {
+                                                print("Document added with ID: \(authResult!.user.uid)")
+                                                completionHandler(true)
+                                            }
+                                        }
+                                    }
+                                })
+                                
+                            }
+                        }
+                    }
                 }
             }
         }

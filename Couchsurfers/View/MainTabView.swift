@@ -35,11 +35,15 @@ struct MainTabView: View {
                     Text(NSLocalizedString("inboxTabItem", comment: "Inbox"))
                 }
             
-            ProfileView()
-                .tabItem {
-                    Image(systemName: "person")
-                    Text(NSLocalizedString("profileTabItem", comment: "Profile"))
-                }
+            NavigationView {
+                ProfileView()
+                    .navigationTitle("")
+                    .navigationBarHidden(true)
+            }
+            .tabItem {
+                Image(systemName: "person")
+                Text(NSLocalizedString("profileTabItem", comment: "Profile"))
+            }
         }
         .accentColor(Color(#colorLiteral(red: 0.3333333333, green: 0.6509803922, blue: 0.1882352941, alpha: 1)))
     }

@@ -20,7 +20,6 @@ class LoginViewModel: ObservableObject {
             alertDescription = NSLocalizedString("emptyFields", comment: "Empty fields")
             showingAlert.toggle()
             completionHandler(false)
-            
             return
         }
         
@@ -47,7 +46,6 @@ class LoginViewModel: ObservableObject {
             }
             
             if authResult != nil {
-                // User is signed in
                 print("User is signed in")
                 completionHandler(true)
             }

@@ -8,12 +8,12 @@
 import SwiftUI
 
 struct LoginView: View {
-    @Binding var isPresented: Bool
-    @Binding var isShowingExplorationView: Bool
+    @EnvironmentObject var env: GlobalEnvironment
     
     @ObservedObject var loginVM = LoginViewModel()
-    
-    @EnvironmentObject var env: GlobalEnvironment
+
+    @Binding var isPresented: Bool
+    @Binding var isShowingExplorationView: Bool
 
     var body: some View {
         ZStack {
@@ -63,7 +63,7 @@ struct LoginView: View {
             
         }
         .alert(isPresented: $loginVM.showingAlert, content: {
-            Alert(title: Text("Information"), message: Text(loginVM.alertDescription), dismissButton: .default(Text(NSLocalizedString("dismissButtonText", comment: "Continue"))) {
+            Alert(title: Text(NSLocalizedString("alertTitle", comment: "Title")), message: Text(loginVM.alertDescription), dismissButton: .default(Text(NSLocalizedString("dismissButtonText", comment: "Continue"))) {
                 print("Dismiss button pressed")
             })
         })
