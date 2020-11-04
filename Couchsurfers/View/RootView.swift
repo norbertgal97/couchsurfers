@@ -12,7 +12,7 @@ struct RootView: View {
     
     var body: some View {
         
-       if env.userLoggedIn {
+        if env.userLoggedIn {
             MainTabView()
         } else {
             RegistrationView()

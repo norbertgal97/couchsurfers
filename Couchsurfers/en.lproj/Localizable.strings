@@ -10,6 +10,13 @@
 "accountCreated" = "Your account has been successfully created.";
 "defaultAlertMessage" = "Sorry! Alert message is missing.";
 "placesAPIlanguage" = "en-GB";
+"alertTitle" = "Information";
+
+// Genders
+"notSpecified" = "Not Specified";
+"male" = "Male";
+"female" = "Female";
+"other" = "Other";
 
 // Firebase errors
 "invalidEmailAddress" = "Email address is malformed.";
@@ -52,4 +59,24 @@
 "goNearText" = "Go near";
 "discoverNearbyPlacesText" = "Discover nearby stays to relax";
 "destinationPlaceholder" = "Where are you going?";
+"unknown" = "Unknown";
+"noSavedCouches" = "There are no saved couches.";
 
+// profileView
+"showProfile" = "Show profile";
+"aSettings" = "Account settings";
+"pInformation" = "Personal information";
+"notifications" = "Notifications";
+"hosting" = "Hosting";
+"listYourCouch" = "List your couch";
+"logOut" = "Log out";
+
+// personalInformationView
+"name" = "NAME";
+"firstName" = "First name";
+"lastName" = "Last name";
+"gender" = "GENDER";
+"selectGender" = "Select Gender";
+"phoneNumber" = "PHONE NUMBER";
+"number" = "Number";
+"save" = "Save";

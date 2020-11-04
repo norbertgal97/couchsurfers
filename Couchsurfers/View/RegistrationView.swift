@@ -10,12 +10,12 @@ import FBSDKLoginKit
 import Firebase
 
 struct RegistrationView: View {
-    @State private var isShowingSheet = false
-    @State private var isShowingExplorationView = false
+    @EnvironmentObject var env: GlobalEnvironment
     
     @ObservedObject var registrationVM = RegistrationViewModel()
     
-    @EnvironmentObject var env: GlobalEnvironment
+    @State private var isShowingSheet = false
+    @State private var isShowingExplorationView = false
     
     var body: some View {
         ZStack {
@@ -51,7 +51,7 @@ struct RegistrationView: View {
                 .cornerRadius(10)
                 
                 DividerWithText(text: NSLocalizedString("dividerText", comment: "or you can"))
-        
+                
                 Button(action : {
                     registrationVM.continueWithFacebook() { result in
                         self.env.userLoggedIn = result
@@ -79,15 +79,9 @@ struct RegistrationView: View {
                 }
             }
         }
-        .onAppear {
-            registrationVM.attachStateDidChangeListenerToFirebaseAuth()
-        }
-        .onDisappear {
-            registrationVM.detachStateDidChangeListenerFormFirebaseAuth()
-        }
         .alert(isPresented: $registrationVM.showingAlert, content: {
-            Alert(title: Text("Information"), message: Text(registrationVM.alertDescription), dismissButton: .default(Text(NSLocalizedString("dismissButtonText", comment: "Continue"))) {
-                print("Dismiss button pressed")
+            Alert(title: Text(NSLocalizedString("alertTitle", comment: "Title")), message: Text(registrationVM.alertDescription), dismissButton: .default(Text(NSLocalizedString("dismissButtonText", comment: "Continue"))) {
+                env.userLoggedIn = registrationVM.userLoggedIn
             })
         })
         .sheet(isPresented: $isShowingSheet) {

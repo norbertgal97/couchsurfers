@@ -20,6 +20,10 @@ target 'Couchsurfers' do
   pod 'FBSDKLoginKit'
   pod 'FBSDKCoreKit'
 
+  # Add the Cloud Firestore pod
+  pod 'Firebase/Firestore'
+  pod 'FirebaseFirestoreSwift'
+
   post_install do |pi|
        pi.pods_project.targets.each do |t|
         t.build_configurations.each do |config|

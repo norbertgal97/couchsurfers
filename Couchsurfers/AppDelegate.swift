@@ -9,13 +9,24 @@ import UIKit
 import Firebase
 import FBSDKCoreKit
 
+var db: Firestore?
+
 class AppDelegate: NSObject, UIApplicationDelegate {
     var userLoggedIn = false
-   
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
         
         FirebaseApp.configure()
+        db = Firestore.firestore()
         ApplicationDelegate.shared.application(application, didFinishLaunchingWithOptions: launchOptions)
+        
+        Auth.auth().addStateDidChangeListener { (auth, user) in
+            if user != nil {
+                self.userLoggedIn = true
+            } else {
+                self.userLoggedIn = false
+            }
+        }
         
         return true
     }
