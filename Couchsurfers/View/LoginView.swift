@@ -36,7 +36,9 @@ struct LoginView: View {
                     loginVM.signInUser(email: loginVM.emailAddress, password: loginVM.password) { result in
                         self.isPresented = !result
                         self.isShowingExplorationView = result
-                        self.env.userLoggedIn = result
+                        if result {
+                            self.env.userLoggedIn = result
+                        }
                     }
                 }) {
                     Text(NSLocalizedString("logInButton", comment: "Login In"))

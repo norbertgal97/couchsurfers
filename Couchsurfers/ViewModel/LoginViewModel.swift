@@ -18,7 +18,7 @@ class LoginViewModel: ObservableObject {
         
         if email.isEmpty || password.isEmpty {
             alertDescription = NSLocalizedString("emptyFields", comment: "Empty fields")
-            showingAlert.toggle()
+            self.showingAlert = true
             completionHandler(false)
             return
         }
@@ -41,7 +41,7 @@ class LoginViewModel: ObservableObject {
                     self.alertDescription = NSLocalizedString("unknownError", comment: "Unknown error")
                 }
                 
-                self.showingAlert.toggle()
+                self.showingAlert = true
                 completionHandler(false)
             }
             
