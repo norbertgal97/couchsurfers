@@ -80,3 +80,19 @@
 "phoneNumber" = "PHONE NUMBER";
 "number" = "Number";
 "save" = "Save";
+
+// couchDetailsView
+"couchName" = "Accommodation name";
+"couchDetails" = "Couch details";
+"guests" = "GUESTS";
+"numOfGuests" = "Number of guests";
+"description" = "DESCRIPTION";
+"amenities" = "AMENITIES";
+"amenitiesExample" = "Wifi, Air conditioning";
+"city" = "CITY";
+"locationPlaceholder" = "Location";
+
+// couchListView
+"about" = "About";
+"amenitiesLowerCase" = "Amenities";
+"couchList" = "My Couch";

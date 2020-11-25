@@ -13,8 +13,11 @@ public struct Couch: Codable {
     let place_id: String
     let rating: Double
     let numberOfReviews: Int
-    let amenities: [String]
+    let amenities: String
+    let name: String
+    let description: String
     let created: Timestamp
+    let numberOfGuests: Int
     
     enum CodingKeys: String, CodingKey {
         case user_id
@@ -22,6 +25,9 @@ public struct Couch: Codable {
         case rating
         case numberOfReviews
         case amenities
+        case name
+        case description
         case created
+        case numberOfGuests
     }
 }

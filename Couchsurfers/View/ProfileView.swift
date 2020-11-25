@@ -94,7 +94,7 @@ struct ProfileView: View {
                     .font(.custom("Pacifico-Regular", size: 30))
                     .frame(maxWidth: .infinity, alignment: .leading)
                     .padding(.all, 10)
-                NavigationLink(destination: PersonalInformationView()) {
+                NavigationLink(destination: CouchListView()) {
                     HStack {
                         Text(NSLocalizedString("listYourCouch", comment: "List your couch"))
                         Spacer()
