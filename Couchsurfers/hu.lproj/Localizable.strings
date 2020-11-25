@@ -79,3 +79,19 @@
 "phoneNumber" = "TELEFONSZÁM";
 "number" = "Szám";
 "save" = "Mentés";
+
+// couchDetailsView
+"couchName" = "Szállás neve";
+"couchDetails" = "Szállás adatai";
+"guests" = "VENDÉGEK";
+"numOfGuests" = "Vendégek száma";
+"description" = "LEÍRÁS";
+"amenities" = "KÉNYELMI SZOLGÁLTATÁSOK";
+"amenitiesExample" = "Wifi, Klímaberendezés";
+"city" = "VÁROS";
+"locationPlaceholder" = "Elhelyezkedés";
+
+// couchListView
+"about" = "Leírás";
+"amenitiesLowerCase" = "Kényelmi szolgáltatások";
+"couchList" = "Én helyem";

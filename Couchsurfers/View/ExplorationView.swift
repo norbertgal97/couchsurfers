@@ -183,7 +183,7 @@ struct RandomLocationView: View {
                     Text("\(cityName ?? NSLocalizedString("unknown", comment: "Unkown"))")
                         .frame(maxWidth: .infinity, alignment: .leading)
                     
-                    Text("\(couch.amenities.joined(separator: ", "))")
+                    Text("\(couch.amenities)")
                         .frame(maxWidth: .infinity, alignment: .leading)
                 }
                 .padding(.horizontal, 5)

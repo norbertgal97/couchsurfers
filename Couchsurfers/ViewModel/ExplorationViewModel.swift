@@ -64,7 +64,7 @@ class ExplorationViewModel: ObservableObject {
                     
                     switch result {
                     case .success(let couch):
-                        let requestUrl = "https://maps.googleapis.com/maps/api/place/details/json?placeid=ChIJyc_U0TTDQUcRYBEeDCnEAAQ&key=\(self.API_KEY)"
+                        let requestUrl = "https://maps.googleapis.com/maps/api/place/details/json?placeid=\(couch?.place_id ?? "ChIJyc_U0TTDQUcRYBEeDCnEAAQ")&key=\(self.API_KEY)"
                         AF.request(requestUrl)
                             .validate()
                             .responseDecodable(of: ReversePlaceId.self) { response in
@@ -89,7 +89,7 @@ class ExplorationViewModel: ObservableObject {
     
     func saveExampleData() {
         //https://maps.googleapis.com/maps/api/place/details/json?placeid=ChIJrTLr-GyuEmsRBfy61i59si0&key=YOUR_API_KEY
-        let couch = Couch(user_id: Auth.auth().currentUser!.uid, place_id: "aswdfcrg", rating: 4.5, numberOfReviews: 22, amenities: ["Wifi", "Kitchen"] ,created: Timestamp(date: Date()))
+        let couch = Couch(user_id: Auth.auth().currentUser!.uid, place_id: "aswdfcrg", rating: 4.5, numberOfReviews: 22, amenities: "Wifi, Kitchen", name: "asd", description: "asd", created: Timestamp(date: Date()), numberOfGuests: 5)
         
         do {
             try db?.collection("couches").document().setData(from: couch)
